@@ -4,7 +4,6 @@ import (
 	"context"
 	"go-speedrun-control/internal/config"
 	"go-speedrun-control/internal/gui"
-	"os"
 )
 
 var mainContext context.Context
@@ -19,7 +18,7 @@ func main() {
 	config.Init(mainContext)
 
 	// show gui
-	if os.Getenv("GUI") == "1" {
-		gui.Show(&mainContext)
-	}
+	//if os.Getenv("GUI") == "1" {
+	gui.Show(&mainContext)
+	//}
 }
